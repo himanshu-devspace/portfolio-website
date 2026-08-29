@@ -116,6 +116,10 @@ footer a:hover {
     gap:20px;
 }
 
+.navbar a.active{
+    color: var(--accent);
+    font-weight: bold;
+}
 
 /* hero section */
 .hero {
@@ -152,8 +156,6 @@ footer a:hover {
 }
 
 .hero-img{
-    /* width: 100%;
-    max-width: 100%; */
     justify-self: end;
 }
 
@@ -201,6 +203,11 @@ footer a:hover {
 .about-content p{
     color: var(--text-muted);
     line-height: 1.5;
+}
+
+.about-img img{
+    width: 400px;
+    max-width: 100%;
 }
 
 /* Skills section */
@@ -265,10 +272,18 @@ footer a:hover {
 }
 
 .project-link{
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--accent);
+    font-weight: bold;
+
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -313,14 +328,6 @@ footer a:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-.project-link{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--accent);
-    font-weight: bold;
-}
-
 .project-link img{
     width: 20px;
     height: 20px;
@@ -344,7 +351,6 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    flex-wrap: wrap;
     margin-top: 20px;
 }
 
@@ -391,11 +397,15 @@ footer a:hover {
     }
 
     .hero-img {
-        justify-self: center;
+        text-align: center;
     }
 
     .hero-img img {
         width: min(400px, 100%);
+    }
+
+    .hero-text h1{
+        font-size: 2.5rem;
     }
 
     .links {
@@ -505,6 +515,9 @@ footer a:hover {
         flex-direction: column;
         gap: 15px;
     }
+    .project-img img{
+        object-fit: unset;
+    }
 }
 
 
@@ -536,10 +549,6 @@ footer a:hover {
     }
 
     .contact-links {
-        gap: 15px;
-    }
-    footer {
-        flex-direction: column;
         gap: 15px;
     }
 }
